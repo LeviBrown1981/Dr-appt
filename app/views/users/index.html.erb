@@ -1,0 +1,23 @@
+<h1>Users</h1>
+<%= link_to 'Add User', new_user_path %>
+<hr />
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= link_to user.full_name, user %>
+    </li>
+<% end %>
+</ul>
+
+<%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+<h2>Welcome <%= current_user.first_name %></h2>
+<hr />
+<%= link_to "Add Appointment", new_user_path %>
+<h3>Your Appointment</h3>
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= user.name %> - $<%= user.appointment %>
+    </li>
+  <% end %>
+</ul>
