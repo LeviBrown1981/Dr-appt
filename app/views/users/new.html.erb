@@ -1,5 +1,5 @@
 <h1>Add User</h1>
-<%= form_with(model: @user, local: true class: "ui form") do |f| %>
+<%= form_with(model: @user, local: true, class: "ui form") do |f| %>
   <div class="field">
     <%= f.label :first_name %>
     <%= f.text_field :first_name, required: true, placeholder: "First Name" %>
@@ -12,5 +12,5 @@
     <%= f.label :appointment %>
     <%= f.number_field :appointment, min: 0 %>
   </div>
-  <%= f.submit, class: "ui cyan button" %>
+  <%= f.submit %>
 <% end %>

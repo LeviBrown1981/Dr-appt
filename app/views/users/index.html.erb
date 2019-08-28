@@ -9,10 +9,10 @@
 <% end %>
 </ul>
 
-<%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+<%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "ui orange button" %>
 <h2>Welcome <%= current_user.first_name %></h2>
 <hr />
-<%= link_to "Add Appointment", new_user_path %>
+<%= link_to "Add Appointment", new_user_path, class: "ui green button" %>
 <h3>Your Appointment</h3>
 <ul>
   <% @users.each do |user| %>
